@@ -50,7 +50,7 @@ body {
 }
 .hero {
   background: linear-gradient(rgba(35, 24, 21, 0.55), rgba(35, 24, 21, 0.55)),
-              url('images/resturant pic.jpeg') top/cover no-repeat;
+              url('images/resturant\ pic.jpeg') top/cover no-repeat;
   min-height: 90vh;
   display: flex;
   align-items: center;
