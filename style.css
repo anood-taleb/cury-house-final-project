@@ -1,0 +1,303 @@
+/* ============================
+   CURRY HOUSE — COLOR THEME
+   ============================ */
+:root {
+  --saffron: #C17817;      /* primary accent - buttons, links, highlights */
+  --chili: #9B2D20;        /* secondary accent - hover states */
+  --cardamom: #6E1423;     /* deep royal maroon - navbar, footer */
+  --ivory: #FAF6EE;        /* main background */
+  --espresso: #231815;     /* body text */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--ivory);
+  color: var(--espresso);
+}
+
+.navbar-curry {
+  background-color: var(--cardamom);
+  padding: 1rem 2rem;
+}
+
+.navbar-curry .navbar-brand {
+  color: var(--ivory);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.navbar-curry .nav-link {
+  color: var(--ivory);
+  font-weight: 500;
+  margin-left: 1.2rem;
+  transition: color 0.25s ease;
+}
+
+.navbar-curry .nav-link:hover {
+  color: var(--saffron);
+}
+
+.navbar-curry .nav-link.active {
+  color: var(--saffron);
+  border-bottom: 2px solid var(--saffron);
+}
+.hero {
+  background: linear-gradient(rgba(35, 24, 21, 0.55), rgba(35, 24, 21, 0.55)),
+              url('images/resturant\ pic.jpeg') top/cover no-repeat;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--ivory);
+  padding: 2rem 1.5rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--ivory);
+  opacity: 0.9;
+}
+
+.btn-curry {
+  background-color: var(--saffron);
+  color: var(--ivory);
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  border: none;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.btn-curry:hover {
+  background-color: var(--chili);
+  color: var(--ivory);
+  transform: translateY(-2px);
+}
+
+.about-section h2 {
+  color: var(--chili);
+  font-weight: 700;
+}
+
+.about-section p {
+  color: var(--espresso);
+  line-height: 1.7;
+}
+
+.stat-number {
+  color: var(--saffron);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--espresso);
+  opacity: 0.75;
+}
+
+.gallery-section h2 {
+  color: var(--chili);
+  font-weight: 700;
+}
+
+.gallery-subtitle {
+  color: var(--espresso);
+  opacity: 0.75;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(35, 24, 21, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.menu-card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(35, 24, 21, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.menu-card .card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(35, 24, 21, 0.18);
+}
+
+.menu-card .card-title {
+  color: var(--espresso);
+  font-weight: 700;
+}
+
+.menu-price {
+  color: var(--chili);
+  font-size: 1.1rem;
+}
+
+
+.services-section h2 {
+  color: var(--chili);
+  font-weight: 700;
+}
+
+.services-subtitle {
+  color: var(--espresso);
+  opacity: 0.75;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(35, 24, 21, 0.1);
+  height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(35, 24, 21, 0.18);
+}
+
+.service-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.service-card h3 {
+  color: var(--saffron);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.service-card p {
+  color: var(--espresso);
+  opacity: 0.85;
+}
+
+.admin-section h2 {
+  color: var(--chili);
+  font-weight: 700;
+}
+
+.admin-subtitle {
+  color: var(--espresso);
+  opacity: 0.75;
+}
+
+.admin-form-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(35, 24, 21, 0.1);
+}
+
+.admin-table {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-table thead {
+  background-color: var(--cardamom);
+  color: var(--ivory);
+}
+
+.admin-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.admin-table tbody tr:hover {
+  background-color: rgba(193, 120, 23, 0.08);
+}
+
+.btn-edit {
+  background-color: var(--saffron);
+  color: var(--ivory);
+  border: none;
+  margin-right: 0.4rem;
+  transition: background-color 0.25s ease;
+}
+
+.btn-edit:hover {
+  background-color: var(--chili);
+  color: var(--ivory);
+}
+
+.btn-delete {
+  background-color: transparent;
+  color: var(--chili);
+  border: 1px solid var(--chili);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.btn-delete:hover {
+  background-color: var(--chili);
+  color: var(--ivory);
+}
+
+/* ============================
+   FOOTER (used on every page)
+   ============================ */
+.footer-curry {
+  background-color: var(--cardamom);
+  color: var(--ivory);
+  padding: 1.2rem 1.5rem;
+  text-align: center;
+}
+
+.footer-curry a {
+  color: var(--ivory);
+  opacity: 0.85;
+  text-decoration: none;
+  margin: 0 0.6rem;
+  transition: opacity 0.25s ease;
+}
+
+.footer-curry a:hover {
+  opacity: 1;
+  color: var(--saffron);
+}
+
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}

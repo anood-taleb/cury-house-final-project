@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curry House | Admin</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-curry">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Curry House</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link active" href="admin.html">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="admin-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-2">Manage Menu Items</h2>
+      <p class="text-center admin-subtitle mb-5">Add, edit, or remove dishes from the menu</p>
+
+      
+      <div class="admin-form-box mb-5">
+        <div class="row g-3">
+
+          <div class="col-md-4">
+            <label class="form-label">Dish Name</label>
+            <input type="text" id="dishName" class="form-control" placeholder="e.g. Chicken Tikka Masala">
+          </div>
+
+          <div class="col-md-3">
+            <label class="form-label">Price ($)</label>
+            <input type="number" id="dishPrice" class="form-control" placeholder="e.g. 12.99">
+          </div>
+
+          <div class="col-md-3">
+            <label class="form-label">Category</label>
+            <select id="dishCategory" class="form-select">
+              <option value="Starter">Starter</option>
+              <option value="Main">Main</option>
+              <option value="Dessert">Dessert</option>
+              <option value="Drink">Drink</option>
+            </select>
+          </div>
+
+          <div class="col-md-2 d-flex align-items-end">
+            <button id="saveBtn" class="btn btn-curry w-100" onclick="saveDish()">Add Dish</button>
+          </div>
+
+        </div>
+
+    
+        <input type="hidden" id="editIndex" value="">
+      </div>
+
+      <div class="table-responsive">
+        <table class="table admin-table">
+          <thead>
+            <tr>
+              <th>Dish Name</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="dishTableBody">
+          
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer class="footer-curry">
+    <p>&copy; 2026 Curry House. All rights reserved.</p>
+    <div>
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
