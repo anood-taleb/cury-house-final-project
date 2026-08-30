@@ -10,9 +10,31 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("dishTableBody")) {
     renderDishes();
   }
+  if (document.getElementById("menuRow")) {
+    renderMenuDishes();
+  }
 });
 
-// ---------- READ: get the saved list from LocalStorage ----------
+function renderMenuDishes() {
+  const dishes = getDishes();
+  const menuRow = document.getElementById("menuRow");
+
+  dishes.forEach(function (dish) {
+    const col = document.createElement("div");
+    col.className = "col-md-4";
+    col.innerHTML =
+      '<div class="card menu-card h-100">' +
+      '<img src="images/dish-placeholder.jpg" class="card-img-top" alt="' + dish.name + '">' +
+      '<div class="card-body">' +
+      '<h5 class="card-title">' + dish.name + '</h5>' +
+      '<p class="card-text">' + dish.category + '</p>' +
+      '<p class="fw-bold menu-price">' + dish.price + ' JD</p>' +
+      '</div>' +
+      '</div>';
+    menuRow.appendChild(col);
+  });
+}
+
 function getDishes() {
   const data = localStorage.getItem("curryDishes");
   // If nothing saved yet, return an empty list instead of null
@@ -23,11 +45,9 @@ function getDishes() {
   }
 }
 
-
 function setDishes(dishes) {
   localStorage.setItem("curryDishes", JSON.stringify(dishes));
 }
-
 
 function saveDish() {
   const name = document.getElementById("dishName").value.trim();
@@ -48,7 +68,7 @@ function saveDish() {
   
     dishes.push(newDish);
   } else {
-    
+  
     dishes[editIndex] = newDish;
   }
 
@@ -61,6 +81,7 @@ function renderDishes() {
   const dishes = getDishes();
   const tableBody = document.getElementById("dishTableBody");
 
+  
   tableBody.innerHTML = "";
 
   if (dishes.length === 0) {
